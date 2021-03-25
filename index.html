@@ -67,6 +67,7 @@
         opacity: 0.9;
         padding-left: 60px;
         padding-bottom: 20px;
+        padding-bottom: 20px;
         width: 100%;
       }
       button {
@@ -234,6 +235,7 @@
 
     <script>
       var elements = document.getElementsByClassName("column");
+
       var i;
 
       // Full-width images
@@ -246,24 +248,27 @@
       // Two images side by side
       function two() {
         for (i = 0; i < elements.length; i++) {
-          elements[i].style.flex = "50%";
+          elements[i].style.flex = "40%";
         }
       }
 
       // Four images side by side
       function four() {
         for (i = 0; i < elements.length; i++) {
-          elements[i].style.flex = "25%";
+          elements[i].style.flex = "20%";
         }
       }
     </script>
     <div class="ref">
+      <br />
       <h3>Reference link</h3>
       <a href="https://www.goalcast.com/2018/12/28/kobe-bryant-quotes/"
-        >Goalcast.com)</a
+        >Goalcast.com</a
       >
       <br />
       <a href="https://en.wikipedia.org/wiki/Kobe_Bryant">Wikipedia</a>
+      <br />
+      <a href="https://www.gettyimages.co.uk/photos/kobe-bryant">Gettyimages</a>
     </div>
   </body>
 </html>
