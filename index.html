@@ -48,12 +48,35 @@
         background-color: rgb(204, 204, 204);
         opacity: 0.9;
       }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      .column {
+        flex: 50%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
       .ref {
         background-color: rgb(199, 176, 46);
         opacity: 0.9;
         padding-left: 60px;
-        padding-top: 5px;
         padding-bottom: 20px;
+        width: 100%;
+      }
+      button {
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      .photo-album {
+        text-align: center;
       }
     </style>
   </head>
@@ -141,7 +164,99 @@
         renaming the All-Star Game MVP Award in his honor.
       </p>
     </div>
-    <div class="photo-album"></div>
+    <div class="photo-album">
+      <button onclick="one()">1</button>
+      <button onclick="two()">2</button>
+      <button onclick="four()">4</button>
+      <div class="row">
+        <div class="column">
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-adjusts-his-jersey-during-the-picture-id139369178?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/los-angeles-lakers-guard-kobe-bryant-and-chicago-bulls-guard-michael-picture-id51641823?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-celebrates-after-winning-over-picture-id102186435?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-poses-with-his-family-at-halftime-after-both-his-and-los-picture-id895194666?s=2048x2048"
+            style="width: 100%;"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-walk-out-to-center-court-during-his-jersey-retirement-at-picture-id895206690?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-poses-in-the-press-room-with-the-oscar-for-best-animated-picture-id927297360?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-dunks-during-a-game-against-the-picture-id56669757?s=2048x2048"
+            style="width: 100%;"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-walks-off-the-court-against-the-picture-id80036833?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-holds-up-the-larry-obrien-the-picture-id102186488?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-poses-for-an-action-portrait-a-picture-id71213085?s=2048x2048"
+            style="width: 100%;"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-goes-up-for-a-dunk-during-the-picture-id80057335?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-shoots-a-freethrow-against-the-picture-id106921473?s=2048x2048"
+            style="width: 100%;"
+          />
+          <img
+            src="https://media.gettyimages.com/photos/kobe-bryant-of-the-los-angeles-lakers-adjusts-his-jersey-during-the-picture-id139369178?s=2048x2048"
+            style="width: 100%;"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var elements = document.getElementsByClassName("column");
+      var i;
+
+      // Full-width images
+      function one() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.flex = "100%";
+        }
+      }
+
+      // Two images side by side
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.flex = "50%";
+        }
+      }
+
+      // Four images side by side
+      function four() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.flex = "25%";
+        }
+      }
+    </script>
     <div class="ref">
       <h3>Reference link</h3>
       <a href="https://www.goalcast.com/2018/12/28/kobe-bryant-quotes/"
